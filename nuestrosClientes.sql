@@ -1,6 +1,6 @@
 -- 1. Cargar el respaldo de la base de datos unidad2.sql.
--- Ejecutar este comando en consola:
--- psql -U postgres EmpresaInternacional < unidad2.sql
+-- Ejecutar este comando en consola de Windows:
+psql -U postgres EmpresaInternacional < unidad2.sql
 
 -----------------------------------------------------------------------------------------
 
@@ -50,13 +50,17 @@ SELECT * FROM producto;
 
 -- 4. Realizar las siguientes consultas:
 
+-- Las siguientes operaciones se realizan en la consola psql (SQL Shell)
+
 -- a. Deshabilitar el AUTOCOMMIT
--- Comprobar el estado de la función AUTOCOMMIT con el comando en consola psql: \echo :AUTOCOMMIT
--- Desabilitar el AUTOCOMMIT con el comando en consola psql: \set AUTOCOMMIT off
+
+-- Consultar estado del AUTOCOMMIT
+\echo :AUTOCOMMIT
+-- Desabilitar AUTOCOMMIT
+\set AUTOCOMMIT off
 
 -- b. Insertar un nuevo cliente
 INSERT INTO cliente (id,nombre,email) VALUES (11,'usuario11','usuario11@gmail.com');
--- DELETE FROM cliente WHERE  id = 11;
 
 -- c. Confirmar que fue agregado en la tabla cliente
 SELECT * FROM cliente WHERE id = 11;
@@ -69,9 +73,4 @@ ROLLBACK;
 SELECT * FROM cliente WHERE id = 11;
 
 -- f. Habilitar de nuevo el AUTOCOMMIT
--- Habilitar el AUTOCOMMIT con el comando en consola psql: \set AUTOCOMMIT on
-
-SELECT * FROM cliente;
-SELECT * FROM compra;
-SELECT * FROM detalle_compra;
-SELECT * FROM producto;
+\set AUTOCOMMIT on
