@@ -1,4 +1,4 @@
-# Desafio: Entendiendo como se comportan nuestros clientes
+# Desafío: Entendiendo como se comportan nuestros clientes
 
 ### Módulo 5
 ### Lenguaje de consultas a una base de datos PostgreSQL
